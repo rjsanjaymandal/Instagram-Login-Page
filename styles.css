@@ -161,3 +161,6 @@ body{
 .footer .copyright{
 	color: #999;	
 }
+.wrapper{
+	width: 100%;
+}
