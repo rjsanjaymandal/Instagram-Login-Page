@@ -1,166 +1,271 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-*{
+* {
+	border: none;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	outline: none;
-	list-style: none;
+}
+
+body {
+	background-color: #fafafa;
+	height: 100vh;
+}
+
+main {
+	height: 100vh;
+	margin: auto;
+	max-width: 935px;
+}
+
+a {
 	text-decoration: none;
-	font-family: 'Roboto', sans-serif;
 }
 
-body{
-	background: #fafafa;
-	font-size: 14px;
+h1 {
+	margin: 20px 0;
 }
 
-.wrapper .header{
-	max-width: 350px;
-	width: 100%;
-	height: auto;
-	margin: 50px auto;
+ul {
+	list-style: none;
 }
 
-.wrapper .header .top,
-.wrapper .signup{
-	background: #fff;
-    border: 1px solid #e6e6e6;
-    border-radius: 1px;
-    padding: 40px 40px 20px;
+/**
+ * Flex rules
+ */
+
+.flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 
-.wrapper .header .logo img{
-	display: block;
-	margin: 0 auto 35px;
+.direction-column {
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-moz-box-direction: normal;
+	-moz-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
-.wrapper .header .form .input_field{
-	margin-bottom: 5px;
+.justify-content-center {
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
 }
 
-.wrapper .header .form .input_field .input{
-	width: 100%;
-	background: #fafafa;
-	border: 1px solid #efefef;
-	font-size: 12px;
-	border-radius: 3px;
-	color: #262626;
+.align-items-center {
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.flex-wrap {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+/**
+ *
+ */
+
+.panel {
+	background-color: white;
+	border: 1px solid #dbdbdb;
+	margin-bottom: 10px;
 	padding: 10px;
 }
 
-.wrapper .header .form .input_field .input:focus{
-	border: 1px solid #b2b2b2;
+#auth {
+	max-width: 350px;
 }
 
-.wrapper .header .form .btn{
-	margin: 10px 0;
-	background-color: #3897f0;
-    border: 1px solid #3897f0;
-    border-radius: 4px;
-    text-align: center;
-    padding: 5px;
+#mobile {
+	max-width: 454px;
 }
 
-.wrapper .header .form .btn a{
+#mobile img {
+	height: 618px;
+}
+
+/**
+ * Login section
+ */
+.login-with-fb,
+form {
+	width: 100%;
+}
+
+.register,
+form {
+	padding: 30px 20px;
+}
+
+.login-with-fb {
+	padding: 30px 20px 20px 20px;
+}
+
+form .sr-only {
+	display: none;
+}
+
+form input {
+	background-color: #fafafa;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	color: #808080;
+	margin-bottom: 8px;
+	padding: 10px 10px;
+	width: 100%;
+}
+
+form input::placeholder {
+	color: #808080;
+}
+
+form input:focus {
+	border: 1px solid #808080;
+	outline: none;
+}
+
+form button {
+	background-color: #0095f6;
+	border-radius: 5px;
 	color: #fff;
-	display: block;
+	font-weight: bold;
+	height: 35px;
+	margin-top: 10px;
+	width: 100%;
 }
 
-.wrapper .header .or{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 15px;
-	margin: 15px 0 20px;
+/**
+ * Separator login form from login with fb
+ */
+.separator span {
+	background-color: #dbdbdb;
+	height: 1px;
+	width: calc(100% - 10px);
 }
 
-.wrapper .header .or .line{
-	width: 105px;
-	height: 2px;
-	background: #efefef
+.separator .or {
+	color: #808080;
+	font-weight: bold;
 }
 
-.wrapper .header .or p{
-	color: #999;
-	font-size: 12px;
+.separator {
+	padding: 0 20px;
 }
 
-.wrapper .dif .fb{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.separator span:first-child {
+	margin-right: 10px;
 }
 
-.wrapper .dif .fb img{
-	width: 16px;
-	height: 16px;
-}
-
-.wrapper .dif  .fb p{
-	color: #385185;
-	font-weight: 500;
+.separator span:last-child {
 	margin-left: 10px;
 }
 
-.wrapper .dif .forgot{
+/**
+ * Login with fb section
+ */
+.login-with-fb a {
+	color: #385185;
+}
+
+.login-with-fb>a {
 	font-size: 12px;
-	text-align: center;
-	margin-top: 20px;
 }
 
-.wrapper .dif .forgot a{
-	color: #003569;
+.login-with-fb div a {
+	font-weight: bold;
 }
 
-.wrapper .signup{
-	margin: 10px 0 20px;
-	padding: 25px 40px;
-	text-align: center;
-	color: #262626;
+.login-with-fb div {
+	margin-bottom: 15px;
 }
 
-.wrapper .signup a{
-	color: #3897f0;
+/**
+ * Register section
+ */
+.register * {
+	font-size: 14px;
 }
 
-.wrapper .apps{
-	text-align: center;
-	color: #262626;
+.register a {
+	color: #0095f6;
+	font-weight: bold;
 }
 
-.wrapper .apps p{
-	margin-bottom: 20px;
+.register p {
+	margin-right: 5px;
 }
 
-.wrapper .apps a img{
-	width: 135px;
+/**
+ * App download
+ */
+.app-download {
+	padding: 15px;
+}
+
+.app-download p {
+	padding: 10px 0;
+}
+
+.app-download img {
 	height: 40px;
 	margin: 0 5px;
 }
 
-.footer{
+/**
+ * Footer
+ */
+footer {
+	margin: 0 auto 30px auto;
 	max-width: 935px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 40px 0;
-	display: flex;
-	justify-content: space-between;
 }
 
-.footer .links ul li{
-	display: inline-block;
-	margin-right: 10px;
+footer ul {
+	margin-bottom: 20px;
 }
 
-.footer .links ul li a{
-	color: #003569;
-	font-size: 12px;
+footer ul li {
+	margin: 0 10px 10px;
 }
 
-.footer .copyright{
-	color: #999;	
+footer ul li a {
+	color: #385185;
 }
-.wrapper{
-	width: 100%;
+
+footer .copyright {
+	color: #808080;
+}
+
+footer ul li a,
+footer .copyright {
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+/**
+ * Media queries
+ */
+
+@media screen and (max-width: 767px) {
+	main {
+		margin: 30px auto 50px auto;
+	}
+
+	footer .copyright,
+	footer ul li a {
+		font-size: 13px;
+	}
 }
