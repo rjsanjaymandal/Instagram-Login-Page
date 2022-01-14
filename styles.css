@@ -226,6 +226,11 @@ form button {
 /**
  * Footer
  */
+ .meta{
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+ }
 footer {
 	margin: 0 auto 30px auto;
 	max-width: 935px;
