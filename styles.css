@@ -15,7 +15,6 @@ main {
 	height: 100vh;
 	margin: auto;
 	max-width: 935px;
-	margin-top: 0px;
 }
 
 a {
@@ -262,7 +261,7 @@ footer .copyright {
 
 @media screen and (max-width: 767px) {
 	main {
-		margin: 30px auto 50px auto;
+		margin: -40px auto 50px auto;
 	}
 
 	footer .copyright,
