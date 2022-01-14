@@ -261,7 +261,7 @@ footer .copyright {
 
 @media screen and (max-width: 767px) {
 	main {
-		margin: -80px auto 50px auto;
+		margin: -100px auto 50px auto;
 	}
 
 	footer .copyright,
